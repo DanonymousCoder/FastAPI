@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def index():
-    return "Hello from StackUp :D Answer is A"
+    return "Hello from StackUp :D Answer is A";
