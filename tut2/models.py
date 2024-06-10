@@ -13,3 +13,13 @@ class User(BaseModel):
         "age": 21
     }
 }
+    @app.get("/users")
+def users_list():
+    return users
+@app.get("/users/{user_id}")
+def user_details(user_id: str):
+    return users[user_id]
+@app.post("/users", status_code=status.HTTP_201_CREATED)
+def user_add(user: User):
+    users[str(uuid.uuid4())] = user
+    return "User added"
