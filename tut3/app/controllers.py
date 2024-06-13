@@ -22,7 +22,7 @@ def update_item(db: Session, item_id: int, item: schemas.ItemCreate):
     db_item.price = item.price
     db.commit()
     db.refresh(db_item)
-    return db_item
+    return db_item 
 
 def delete_item(db: Session, item_id: int):
     db_item = db.query(models.Item).filter(models.Item.id == item_id).first()
