@@ -8,4 +8,4 @@ class Item(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String)
     description = Column(String)
-    price = Column(Integer)
+    price = Column(Integer) 
