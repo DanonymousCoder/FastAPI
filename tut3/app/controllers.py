@@ -20,7 +20,7 @@ def update_item(db: Session, item_id: int, item: schemas.ItemCreate):
     db_item.title = item.title
     db_item.description = item.description
     db_item.price = item.price
-    db.commit()
+    db.commit() 
     db.refresh(db_item)
     return db_item 
 
